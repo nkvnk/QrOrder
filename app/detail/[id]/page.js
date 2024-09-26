@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { supabase } from "../../../utils/supabase";
 import { addBill } from "@/utils/supabaseFunction";
+
 const MenuItemDetail = () => {
   const { id } = useParams();
   const [menuItem, setMenuItem] = useState(null);
@@ -38,7 +39,7 @@ const MenuItemDetail = () => {
   return (
     <div className="relative h-screen overflow-y-auto">
       <div className="relative mt-15">
-        <img
+        <image
           src={menuItem.image}
           alt={menuItem.title}
           className="w-full h-64 object-cover rounded-md"

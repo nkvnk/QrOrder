@@ -5,26 +5,19 @@ import { LuMenuSquare } from "react-icons/lu";
 import { IoMdPerson } from "react-icons/io";
 import Language from "../components/Languages";
 import Link from "next/link";
-import { CiSearch } from "react-icons/ci";
 import SideBar from "../components/SideBar";
 import { getMenu, getBill } from "../utils/supabaseFunction";
 import { BsCart4 } from "react-icons/bs";
-import { MdOutlineTableBar } from "react-icons/md";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [showCartModal, setShowCartModal] = useState(false);
-  const [showAddedModal, setShowAddedModal] = useState(false);
 
   const [items, setItems] = useState([]);
   const [check, setCheck] = useState([]);
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
-
-  const openCartModal = () => setShowCartModal(true);
-  const closeCartModal = () => setShowCartModal(false);
 
   const addToCart = () => {
     setShowAddedModal(true);

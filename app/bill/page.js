@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/utils/supabase";
 import { MdRestaurant } from "react-icons/md";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 
 export default function Cart() {
@@ -47,9 +47,11 @@ export default function Cart() {
       0
     );
 
-  const getTotalCount = () =>
+  {
+    /* const getTotalCount = () =>
     items.reduce((total, item) => total + (quantity[item.id] || 0), 0);
-
+*/
+  }
   const saveCartToAF = async () => {
     const itemsToSave = items.map((item) => ({
       id: item.id,
