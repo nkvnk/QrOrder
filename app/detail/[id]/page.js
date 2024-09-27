@@ -39,11 +39,6 @@ const MenuItemDetail = () => {
   return (
     <div className="relative h-screen overflow-y-auto">
       <div className="relative mt-15">
-        <image
-          src={menuItem.image}
-          alt={menuItem.title}
-          className="w-full h-64 object-cover rounded-md"
-        />
         <Link href={"/"}>
           <button className="absolute top-4 right-4 text-red-500">
             <svg
@@ -65,6 +60,11 @@ const MenuItemDetail = () => {
       </div>
 
       <div className="mt-4 px-4 pb-24">
+        <img
+          src={menuItem.image}
+          alt={menuItem.name}
+          className="w-full h-64 object-cover rounded-md"
+        />
         <h2 className="text-2xl font-semibold">{menuItem.name}</h2>
         <p className="text-gray-500 mt-2">{menuItem.detail}</p>
 
